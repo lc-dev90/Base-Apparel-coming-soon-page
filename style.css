@@ -58,6 +58,14 @@ main {
   width: 100px;
 }
 
+.side-img {
+  width: 100%;
+}
+
+.side-img img {
+  min-width: 100%;
+}
+
 section {
   padding: 30px 35px;
 }
@@ -101,9 +109,9 @@ input[type="text"] {
   padding: 1rem 25px;
   border-radius: 50px;
   outline: none;
-  border: 1px solid var(--clr-red-light);
+  border: 1px solid var(--clr-red-light-);
   font-family: "Josefin Sans", sans-serif;
-  color: var(--clr-red-light);
+  color: var(--clr-red-light-);
   background-color: var(--linear-to-white);
   font-size: 0.9rem;
   vertical-align: middle;
@@ -133,6 +141,17 @@ a[type="submit"]::after {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (max-width: 375px) {
+  main {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
 }
 
 /* main {
