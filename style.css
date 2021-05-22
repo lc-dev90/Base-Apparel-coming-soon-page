@@ -42,5 +42,100 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   color: var(--clr-dark-low-red);
-  background: var(--linear-to-white);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding-left: 8%;
+}
+
+img[src="./images/hero-mobile.jpg"] {
+  display: none;
+}
+
+.logo {
+  margin: 70px 0;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.title {
+  font-size: min(7vw, 4rem);
+  text-transform: uppercase;
+  font-weight: var(--fw-light);
+  color: var(--clr-red-light);
+  width: 400px;
+  margin-bottom: 20px;
+  letter-spacing: 1rem;
+}
+
+.title span {
+  font-weight: var(--fw-large);
+  display: block;
+  color: var(--clr-dark-low-red);
+}
+
+.description {
+  color: var(--clr-red-light);
+  font-size: 1rem;
+  width: 90%;
+  width: 450px;
+  max-width: 80%;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.form-control {
+  width: 450px;
+  max-width: 80%;
+  position: relative;
+}
+
+.input-text {
+  padding: 1.2rem;
+  color: var(--clr-red-light);
+  border: 1px solid var(--clr-red-light-);
+  border-radius: 50px;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.input-text::placeholder {
+  color: var(--clr-red-light-);
+
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.input-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 110px;
+  height: 100%;
+  background: var(--linear-to-red-light);
+  border-radius: 50px;
+}
+
+.input-submit::after {
+  content: url(./images/icon-arrow.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-section {
+  width: 40%;
+  background: url(./images/hero-desktop.jpg) no-repeat center center / cover;
 }
