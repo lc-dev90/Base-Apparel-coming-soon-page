@@ -9,40 +9,33 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Base Apparel coming soon page</title>
     <style></style>
   </head>
   <body>
     <main>
-      <header>
-        <div class="logo">
-          <img src="./images/logo.svg" alt="" />
-        </div>
+      <header class="logo">
+        <img src="./images/logo.svg" alt="" />
       </header>
+      <aside class="side-image">
+        <img src="./images/hero-mobile.jpg" alt="" />
+      </aside>
       <section>
-        <div class="title">
-          <h1>we're<span>coming soon </span></h1>
-        </div>
-        <div class="content">
-          <p>
-            Hello fellow shoppers! We're currently building our new fashion
-            store. Add your email below to stay up-to-date with announcements
-            and our launch deals.
-          </p>
-        </div>
+        <h1 class="title">we're<span>coming soon </span></h1>
+        <p class="description">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
         <div class="form-control">
           <form class="form" id="form">
-            <input type="text" placeholder="Email Address" />
-            <input type="submit" />
+            <input id="email" type="text" placeholder="Email Address" />
+            <a id="submit" href="#" type="submit"></a>
             <small></small>
           </form>
         </div>
       </section>
-      <aside>
-        <figure>
-          <img src="./images/hero-desktop.jpg" alt="" />
-        </figure>
-      </aside>
     </main>
   </body>
 </html>
