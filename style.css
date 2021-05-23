@@ -61,15 +61,15 @@ img[src="./images/hero-mobile.jpg"] {
 }
 
 .logo {
-  margin: 70px 0;
+  margin: min(70px, 4.8vw) 0;
 }
 
 .content {
-  margin-top: min(5vw, 66px, 2vh);
+  margin-top: min(4.8vw, 66px);
 }
 
 .title {
-  font-size: min(7vw, 4rem);
+  font-size: min(4.4vw, 4rem);
   text-transform: uppercase;
   font-weight: var(--fw-light);
   color: var(--clr-red-light);
