@@ -64,6 +64,20 @@ main {
   margin: min(70px, 4.8vw) 0;
 }
 
+.logo img {
+  animation-name: down;
+  animation-duration: 1s;
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .content {
   margin-top: min(4.8vw, 66px);
 }
@@ -76,6 +90,17 @@ main {
   width: 400px;
   margin-bottom: 20px;
   letter-spacing: 1rem;
+  animation-name: left;
+  animation-duration: 1s;
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .title span {
@@ -92,12 +117,36 @@ main {
   max-width: 80%;
   margin-bottom: 40px;
   line-height: 1.8;
+  animation-name: right;
+  animation-duration: 0.5s;
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .form-control {
   width: 450px;
   max-width: 80%;
   position: relative;
+  animation-name: up;
+  animation-duration: 0.7s;
+}
+
+@keyframes up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .input-text {
