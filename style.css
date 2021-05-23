@@ -100,13 +100,6 @@ main {
   position: relative;
 }
 
-.form-control.error .input-text::after {
-  content: url(./images/icon-error.svg);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .input-text {
   padding: min(1.2rem, 2vw);
   color: var(--clr-dark-low-red);
@@ -116,6 +109,24 @@ main {
   background: transparent;
   width: 100%;
   font-size: 1rem;
+}
+
+.form-control.error .input-text {
+  border-color: var(--clr-red-medium);
+}
+
+form {
+  position: relative;
+}
+form::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 120px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url(./images/icon-error.svg) no-repeat center center / cover;
 }
 
 .input-text::placeholder {
@@ -167,6 +178,13 @@ main {
   height: 100%;
 }
 
+small {
+  position: absolute;
+  left: 20px;
+  bottom: -55%;
+  color: var(--clr-red-medium);
+}
+
 @media (max-width: 1052px) {
   .title {
     font-size: 40px;
@@ -179,8 +197,12 @@ main {
   .content {
     margin-top: 45px;
   }
-  .input-submit::after{
-    transform: translate(-50%, -50%) scale(.8)
+  .input-submit::after {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  form::after {
+    right: 35%;
   }
 }
 
@@ -239,21 +261,27 @@ main {
     position: relative;
     margin: 30px;
   }
-  
-  .input-text::placeholder{
+
+  .input-text::placeholder {
     font-size: 0.75rem;
   }
 
-  .input-text{
+  .input-text {
     font-size: 0.75rem;
     padding: 12px;
   }
 
-  .input-submit{
+  .input-submit {
     width: 55px;
     height: 100%;
   }
 
-  .input-submit::after{
-    transform: translate(-50%, -50%) scale(.8)
+  .input-submit::after {
+    transform: translate(-50%, -50%) scale(0.8);
   }
+
+  form::after {
+    right: 50px;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}
