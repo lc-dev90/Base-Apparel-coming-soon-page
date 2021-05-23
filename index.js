@@ -6,6 +6,7 @@ const modal = document.getElementById("modal");
 const close = document.getElementById("close");
 
 submitElement.addEventListener("click", (e) => {
+  e.preventDefault();
   const email = inputEmailElement.value;
   if (email === "") {
     errorGenerator(email, "Please provide your email");
