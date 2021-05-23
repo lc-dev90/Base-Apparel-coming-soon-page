@@ -80,6 +80,7 @@ main {
 
 .content {
   margin-top: min(4.8vw, 66px);
+  position: relative;
 }
 
 .title {
@@ -92,6 +93,13 @@ main {
   letter-spacing: 1rem;
   animation-name: left;
   animation-duration: 1s;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.title:hover {
+  transform: scale(1.1) translateX(10px);
+  transform-origin: center;
 }
 
 @keyframes left {
