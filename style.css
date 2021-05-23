@@ -183,6 +183,29 @@ small {
   left: 20px;
   bottom: -55%;
   color: var(--clr-red-medium);
+  opacity: 0;
+}
+
+.form-control form::after {
+  opacity: 0;
+}
+.form-control.error form::after {
+  opacity: 1;
+}
+
+.form-control.error small {
+  opacity: 1;
+}
+
+.modal-popup {
+  display: none;
+}
+
+.form-control.error .modal-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 1052px) {
@@ -226,7 +249,6 @@ small {
     width: 100%;
     padding-left: 0;
     display: flex;
-    justify-content: center;
   }
   .content {
     max-width: 90%;
