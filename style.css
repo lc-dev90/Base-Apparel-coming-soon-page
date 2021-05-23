@@ -288,6 +288,19 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+  animation: smooth;
+  animation-duration: 0.7s;
+  box-shadow: 2px 5px 30px hsla(0, 0%, 0%, 0.63);
+}
+
+@keyframes smooth {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .modal-popup button {
@@ -301,6 +314,9 @@ main {
   width: 90px;
 }
 
+.modal-popup button:hover {
+  background: linear-gradient(135deg, hsl(0, 90%, 80%), hsl(0, 97%, 73%));
+}
 .modal-popup .description {
   margin-bottom: 10px;
   max-width: 100%;
@@ -309,13 +325,6 @@ main {
 
 .modal-popup .description:nth-of-type(1) {
   color: var(--clr-dark-low-red);
-}
-.modal-popup::after {
-  content: "";
-  background: url(./images/cancel.svg);
-  top: 0;
-  left: 0;
-  position: absolute;
 }
 
 .modal {
