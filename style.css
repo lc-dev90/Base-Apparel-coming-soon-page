@@ -56,7 +56,7 @@ main {
   padding-left: min(12vw, 168px);
 }
 
-img[src="./images/hero-mobile.jpg"] {
+.img-mobile {
   display: none;
 }
 
@@ -167,7 +167,7 @@ img[src="./images/hero-mobile.jpg"] {
   height: 100%;
 }
 
-@media (max-width: 952px) {
+@media (max-width: 1052px) {
   .title {
     font-size: 40px;
   }
@@ -178,5 +178,62 @@ img[src="./images/hero-mobile.jpg"] {
 
   .content {
     margin-top: 45px;
+  }
+}
+
+@media (max-width: 652px) {
+  body {
+  }
+  main {
+    justify-content: center;
+    overflow-x: hidden;
+  }
+  .logo {
+    transform: scale(0.65) translateX(-40px);
+    margin: 20px 0;
+  }
+  .img-section {
+    display: none;
+  }
+
+  .main-section {
+    max-width: 375px;
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .content h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    margin-top: 45px;
+    letter-spacing: 0.8rem;
+  }
+  .description {
+    text-align: center;
+    max-width: 85%;
+    margin: 0 auto;
+    font-size: 0.75rem;
+  }
+
+  .img-mobile {
+    position: relative;
+    display: block;
+  }
+
+  .img-mobile img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .form-control {
+    width: 100%;
+    position: relative;
+    margin: 30px 20px;
   }
 }
