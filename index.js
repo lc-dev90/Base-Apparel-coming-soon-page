@@ -1,9 +1,8 @@
-const formElement = document.getElementById("form");
+const submitElement = document.getElementById("input-submit");
 const inputEmailElement = document.getElementById("input-text");
 const formControl = document.getElementById("form-control");
 
-formElement.addEventListener("click", (e) => {
-  e.preventDefault();
+submitElement.addEventListener("click", (e) => {
   const email = inputEmailElement.value;
   if (email === "") {
     geraErro(email, "Please provide your email");
@@ -18,6 +17,7 @@ function geraErro(input, msg) {
   formControl.className = "form-control error";
   const small = formControl.querySelector("small");
   small.textContent = msg;
+  inputEmailElement.value = "";
 }
 
 function isValidEmail(email) {
