@@ -120,7 +120,7 @@ main {
 
 .input-text::placeholder {
   color: var(--clr-red-light-);
-
+  font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -129,7 +129,7 @@ main {
   top: 0;
   right: 0;
   width: min(110px, 12vw);
-  height: 100%;
+  height: 99%;
   background: var(--linear-to-red-light);
   border-radius: 50px;
   cursor: pointer;
@@ -236,4 +236,11 @@ main {
     position: relative;
     margin: 30px 20px;
   }
-}
+  
+  .input-text::placeholder{
+    font-size: 0.75rem;
+  }
+
+  .input-text{
+    font-size: 0.75rem;
+  }
