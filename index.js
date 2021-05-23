@@ -32,10 +32,12 @@ function successGenerator(input, msg) {
 
   inputEmailElement.value = "";
   close.addEventListener("click", (e) => {
+    location.reload();
     modal.style.display = "none";
   });
   window.onclick = function (event) {
     if (event.target == modal) {
+      location.reload();
       modal.style.display = "none";
     }
   };
