@@ -108,7 +108,7 @@ img[src="./images/hero-mobile.jpg"] {
 }
 
 .input-text {
-  padding: 1.2rem;
+  padding: min(1.2rem, 2vw);
   color: var(--clr-dark-low-red);
   border: 1px solid var(--clr-red-light-);
   border-radius: 50px;
@@ -128,7 +128,7 @@ img[src="./images/hero-mobile.jpg"] {
   position: absolute;
   top: 0;
   right: 0;
-  width: 110px;
+  width: min(110px, 12vw);
   height: 100%;
   background: var(--linear-to-red-light);
   border-radius: 50px;
