@@ -3,6 +3,7 @@ const inputEmailElement = document.getElementById("input-text");
 const formControl = document.getElementById("form-control");
 const modalPopup = document.getElementById("modal-popup");
 const modal = document.getElementById("modal");
+const close = document.getElementById("close");
 
 submitElement.addEventListener("click", (e) => {
   const email = inputEmailElement.value;
@@ -24,8 +25,15 @@ function errorGenerator(input, msg) {
 
 function successGenerator(input, msg) {
   modal.style.display = "block";
-  modalPopup.innerText = `${msg} An email has been send to ${input}, go ahead and check it out!`;
+  modalPopup.querySelectorAll("p")[0].textContent = `${msg}`;
+  modalPopup.querySelectorAll(
+    "p"
+  )[1].textContent = `An email has been send to ${input}, go ahead and check it out!`;
+
   inputEmailElement.value = "";
+  close.addEventListener("click", (e) => {
+    modal.style.display = "none";
+  });
   window.onclick = function (event) {
     if (event.target == modal) {
       modal.style.display = "none";

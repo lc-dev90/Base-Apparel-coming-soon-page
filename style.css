@@ -210,11 +210,42 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
+  width: 350px;
   height: 200px;
-  background-color: red;
+  background: var(--linear-to-white);
+  color: var(--clr-red-medium);
   display: block;
   z-index: 3;
+  padding: 20px 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.modal-popup button {
+  padding: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  border: 1px solid var(--clr-red-light);
+  background: var(--linear-to-red-light);
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  width: 90px;
+}
+
+.modal-popup .description {
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.modal-popup .description:nth-of-type(1) {
+  color: var(--clr-dark-low-red);
+}
+.modal-popup::after {
+  content: "";
+  background: url(./images/cancel.svg);
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
 .modal {
